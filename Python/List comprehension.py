@@ -1,3 +1,13 @@
+from random import choice
+from string import ascii_uppercase, ascii_lowercase, digits
+import string
+
+ 
+def password_generator(length: int, from_what_generate = string.digits + string.ascii_lowercase + ascii_uppercase): 
+    return (''.join(choice(from_what_generate) for i in range(length))) # use list comprehension to ganarate password
+
+print(password_generator(5))
+
 R = 100
 DIVISIBLE_BY = 7
 
@@ -32,5 +42,7 @@ def mark_vowels(letter):
 
 
 x3 = [mark_vowels(i) for i in sentence]
-print(x3)
 print(''.join(x3))
+
+
+
