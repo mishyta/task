@@ -1,0 +1,11 @@
+{
+    "SELENOID_OPTIONS": {
+        "enableVNC": true,
+        "enableVideo": null
+    },
+    "CAPABILITIES_FF": {
+        "browserName": "firefox",
+        "browserVersion": 92.0,
+        "selenoid:options": "SELENOID_OPTIONS"
+    }
+}
