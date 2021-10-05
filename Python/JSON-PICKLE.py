@@ -15,11 +15,11 @@ SELENOID ={
     "selenoid:options": 'SELENOID_OPTIONS'
 },
 }
-print('''
+
 ########
 # JSON #
 ########
-''')
+
 
 str = json.dumps(SELENOID,indent= 4) # Encoding basic Python object to json
 print(str)
@@ -40,11 +40,11 @@ print(fpath.read_text())
 with open('selenoid.json', 'r') as f:# Read basic Python object from json file 
     conf = json.load(f)
 
-print('''
+
 ##########
 # PICKLE #
 ##########
-''')
+
 
 str = pickle.dumps(SELENOID) # Encoding basic Python object to bytes
 print(str)
