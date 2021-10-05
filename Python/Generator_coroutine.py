@@ -4,10 +4,10 @@
 # generator #
 #############
 
-from io import SEEK_CUR
 
 
 def func():
+    
     print('values:')
     for i in range(4):
         yield i # Like 'return' but does not return the value, that returns the Object Generator 
@@ -37,12 +37,12 @@ for i in generaor: # becouse generator is iterable
 # EXAMPLE_1
 
 def read_file_line_by_line(file_name): # Lazy reading file 
-  with open(file_name, 'r') as f:
-      while True:
-        line = f.readline()
-        if not line:
-          break
-        yield line
+    with open(file_name, 'r') as f:
+        while True:
+            line = f.readline()
+            if not line:
+                break
+            yield line
 
 f = read_file_line_by_line('python.zen')
 print(type(f)) # <class 'generator'>
@@ -79,9 +79,10 @@ def print_line_contains(word):
 search = print_line_contains('4')
 print(type(search)) # <class 'generator'>
 next(search) # init coroutine
-search.send('12312') # send data to coroutine
-search.send('12312')
-search.send('56454')
+search.send('1bn12') # send data to coroutine
+search.send('564hj')
+search.send('12356')
+search.send('asd12')
 search.close() # close coroutine
 print()
 
