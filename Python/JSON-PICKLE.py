@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import pickle
 import pandas as pd
-from work_with_pathlib import ls
+
 SELENOID ={
 'SELENOID_OPTIONS': {
     "enableVNC": True,
@@ -56,7 +56,7 @@ print(conf)
 
 with open('selenoid.pickle', 'wb') as write_file: # Write basic Python object to json file 
     pickle.dump(SELENOID, write_file)
-ls()
+
 
 print(pd.read_pickle('selenoid.pickle'))
 
