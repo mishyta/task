@@ -97,5 +97,13 @@ def loading_line(times:int = 3, speed:float = 0.1, value:str = 'loading...') -> 
             time.sleep(speed)
             print("\033[A                             \033[A")
 
+# groupby
+data = 'Make an iterator that returns consecutive keys and groups from the iterable.'
 
+# count the number of repetitions of characters
+def count_symbols(data) -> dict:
+    # returns dict where key=symbol value=number of repetitions
+    data = sorted(data.lower())
+    return {k:len(list(g)) for k, g in groupby(data)}
 
+print(count_symbols(data))
